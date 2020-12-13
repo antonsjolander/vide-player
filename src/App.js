@@ -6,7 +6,6 @@ import './style/index.scss';
 function App() {
   const [data, setData] = useState([])
   const [video, setVideo] = useState(false)
-  const [error, setError] = useState(false);
 
   const getData = () => {
     fetch('data.json', {
@@ -18,7 +17,6 @@ function App() {
     .then((resp) => resp.json())
     .then((myJson) => setData(myJson))
     .catch((error) => {
-      setError(true)
       console.error(error);
     })
   }
