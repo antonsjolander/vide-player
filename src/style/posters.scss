@@ -1,0 +1,44 @@
+.posters {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    position: relative;
+
+    @media (max-width: 767.98px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.poster {
+    cursor: pointer;
+}
+
+.poster__image {
+    width: 100%;
+}
+
+.poster__name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.poster__description {
+    position: fixed;
+    opacity: 0;
+    z-index: 1;
+    transform: translate(10px,10px);
+    background-color: #eeee;
+    width: 100%;
+    font-size: 12px;
+    max-width: 300px;
+    padding: 0.5rem;
+
+    &.show {
+        opacity: 1
+    }
+}
